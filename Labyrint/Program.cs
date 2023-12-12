@@ -49,12 +49,22 @@ while (room != "NetherRealm")
             room = "Djungeln";
 
             Console.WriteLine("Nu verkar det som att du har hamnat i en djungel");
-            Console.WriteLine("Du går runt ett tag och från ingenstans så träffar du på Mowgli från djungelboken och han visar dig vägen till dörrarna");
+            Console.WriteLine("Du går runt ett tag och från ingenstans så träffar du på en tribe member och han visar dig vägen till dörrarna");
             nytt_rum();
 
         }
     
-    
+        else if (dörr == "c")
+        {
+            room = "Himlen";
+
+            Console.WriteLine("Nu står du framför fadern, sonen och den heliga anden och han medelar att du är vid dödsdörren för att nu är det brottom");
+            Console.WriteLine("Han känner medkänsla då han själv har varit i din sitts så han visar genast vägen till de tre dörrarna");
+            nytt_rum();
+            
+        }
+
+
     }
 
 }
