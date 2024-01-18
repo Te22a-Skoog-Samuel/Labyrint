@@ -14,6 +14,16 @@ string currentRoom = "Sovrum";
 while (currentRoom != "NetherRealm")
 {
 
+string dörr = ""; 
+
+while (dörr != "a" && dörr != "b" && dörr != "c")
+        {
+            Console.WriteLine("Du måste svara med ett av alternativen");
+            
+            dörr = Console.ReadLine();
+        
+        }
+   
     if (currentRoom == "Sovrum")
     {
 
@@ -75,13 +85,12 @@ while (currentRoom != "NetherRealm")
     if (currentRoom == "The Void")
     {
 
-        Console.WriteLine("Det verkar som att du har brytit mot naturens lagar och warpat till ett ställe där tid och rum inte existerar.");
-        Console.WriteLine("Efter du har varit i detta tomrum i 370 år så hittar du tre dörrar svävande.");
+        Console.WriteLine("Det verkar som att du har brytit mot naturens lagar och warpat till ett ställe där tid och rum inte existerar. Efter du har varit i detta tomrum i 370 år så hittar du tre dörrar svävande.");
 
         if (visitedRooms.Contains("The Void"))
         {
             Console.WriteLine("Vad fan gör du här igen, behövde du inte skita eller?");
-
+            
         }
         else
         {
@@ -100,8 +109,33 @@ while (currentRoom != "NetherRealm")
         
         }
 
+        if (dörr == "a")
+        {
 
-        
+            currentRoom = "Sovrum";
+
+        }
+
+        else if (dörr == "b")
+        {
+
+            currentRoom = "The Abyss";
+
+            Console.WriteLine("Du faller och faller men du träffar aldrig marken. Det verkar som att du har hamnat i en oändlig loop");
+
+        }
+
+        else if (dörr == "c")
+        {
+            currentRoom = "Djungeln";
+
+        }
+
+        else 
+        {
+            Console.WriteLine("Du måste svara med ett av alternativen");
+        }
+
     }
 
 
